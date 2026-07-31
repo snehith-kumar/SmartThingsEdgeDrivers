@@ -1,0 +1,7 @@
+name: 'KNX IoT Controller'
+packageKey: 'knx-iot-controller'
+permissions:
+  lan: {}
+  discovery: {}
+description: "SmartThings Edge driver for KNX installations, via a controller implementing the standard KNX IoT 3rd-Party API (KNX Standard V3.0). Thin LAN client: OAuth2 client-credentials auth, REST commands, polling status. The controller owns the KNX stack, DPT encoding and the ETS-derived catalog; the driver reads semantic functions and maps each to one SmartThings device."
+vendorSupportInformation: "https://support.smartthings.com"

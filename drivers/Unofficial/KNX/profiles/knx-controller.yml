@@ -1,0 +1,57 @@
+name: knx-controller
+components:
+  - id: main
+    capabilities:
+      - id: refresh
+        version: 1
+    categories:
+      - name: Bridges
+preferences:
+  - name: host
+    title: "Controller IP address"
+    description: "LAN IP (or hostname) of the KNX IoT 3rd-Party API controller. Save to connect."
+    required: false
+    preferenceType: string
+    definition:
+      stringType: text
+      minLength: 0
+      maxLength: 64
+      default: ""
+  - name: port
+    title: "Controller HTTPS port"
+    description: "Port the KNX IoT 3rd-Party API is served on (default 443)."
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 1
+      maximum: 65535
+      default: 443
+  - name: clientId
+    title: "OAuth2 client ID"
+    description: "Client ID provisioned on the controller for this driver."
+    required: false
+    preferenceType: string
+    definition:
+      stringType: text
+      minLength: 0
+      maxLength: 128
+      default: ""
+  - name: clientSecret
+    title: "OAuth2 client secret"
+    description: "Client secret paired with the client ID. Stored on the hub only."
+    required: false
+    preferenceType: string
+    definition:
+      stringType: password
+      minLength: 0
+      maxLength: 128
+      default: ""
+  - name: pollInterval
+    title: "Status poll interval (seconds)"
+    description: "How often to read datapoint values from the controller (2-5 s recommended)."
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 1
+      maximum: 60
+      default: 3
